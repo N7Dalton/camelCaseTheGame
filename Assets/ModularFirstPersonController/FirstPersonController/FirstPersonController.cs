@@ -203,9 +203,9 @@ public class FirstPersonController : MonoBehaviour
     private void Update()
     {
         #region Camera
-
+        
         // Control camera movement
-        if(cameraCanMove)
+        if (cameraCanMove)
         {
             yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
 
@@ -451,6 +451,7 @@ public class FirstPersonController : MonoBehaviour
         if (Physics.Raycast(origin, direction, out RaycastHit hit, distance))
         {
             Debug.DrawRay(origin, direction * distance, Color.red);
+     
             isGrounded = true;
         }
         else
